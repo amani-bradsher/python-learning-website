@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <style>
+           body {background-color:AliceBlue}
+           h1 {text-align: center;color:CadetBlue;background-color: white;  padding: 15px;}
+           code {display: block;color:black; font-size: 13px;}
+           p {color:DarkCyan;font-size: 18px;}
+           footer {background-color:#c1f0f0;padding: 5px;color:#0f3e3e}
+          .nav-lessons {display: flex; justify-content: space-between;}
+          .nav {display: flex;gap: 10px;}
+          .textbox { background-color: white; padding: 12px; border: 1px solid  #c2d6d6; border-radius: 8px;
+            width: 300px; }
+           p code { display: inline;color:black; font-size: 14px;background-color: white;}
+           .score-message { text-align: center; background-color: white; border: 1px solid #c2d6d6; border-radius: 8px;
+            padding: 20px; margin: 20px auto; width: 400px;}
+          button:hover { background-color: DarkCyan; }
+
+    </style>
+    <title>List</title>
+</head>
+<h1>Lists, Tuples, and Sets Quiz</h1>
+<body>
+
+<form method="POST" action="/quiz_lists">
+
+<p>1. Which collection is changeable?</p>
+<input type="radio" name="q1" value="a"> A. Tuple <br>
+<input type="radio" name="q1" value="b"> B. List <br>
+<input type="radio" name="q1" value="c"> C. Set <br>
+<input type="radio" name="q1" value="d"> D. Both B and C <br><br>
+
+<p>2. Which collection cannot be changed?</p>
+<input type="radio" name="q2" value="a"> A. List <br>
+<input type="radio" name="q2" value="b"> B. Tuple <br>
+<input type="radio" name="q2" value="c"> C. Set <br>
+<input type="radio" name="q2" value="d"> D. Array <br><br>
+
+<p>3. What is special about sets?</p>
+<input type="radio" name="q3" value="a"> A. Ordered <br>
+<input type="radio" name="q3" value="b"> B. Allow duplicates <br>
+<input type="radio" name="q3" value="c"> C. No duplicates <br>
+<input type="radio" name="q3" value="d"> D. Only numbers <br><br>
+
+<p>4. What will this return?</p>
+<div class="textbox">
+<pre><code>nums = {1, 2, 2, 3}
+print(nums)</code></pre>
+</div>
+<input type="radio" name="q4" value="a"> A. {1, 2, 2, 3} <br>
+<input type="radio" name="q4" value="b"> B. {1, 2, 3} <br>
+<input type="radio" name="q4" value="c"> C. Error <br>
+<input type="radio" name="q4" value="d"> D. [1, 2, 3] <br><br>
+
+<p>5. True or False: Tuples use square brackets [ ].</p>
+<input type="radio" name="q5" value="true"> True <br>
+<input type="radio" name="q5" value="false"> False <br><br>
+
+<p>6. What do lists use?</p>
+<input type="radio" name="q6" value="a"> A. ( ) <br>
+<input type="radio" name="q6" value="b"> B. { } <br>
+<input type="radio" name="q6" value="c"> C. [ ] <br>
+<input type="radio" name="q6" value="d"> D. &lt; &gt; <br><br>
+
+<button type="submit" style="background-color:CadetBlue; color:white; padding:10px 25px; border:none; border-radius:8px;
+font-size:15px; cursor:pointer;">Submit Quiz</button>
+
+</form>
+
+
+{% if score is not none %}
+  <div class="score-message">
+     {% if score == 6 %}
+        <p>🌟 Perfect score! You got 6 out of 6! You're a python expert!</p>
+
+     {% elif score == 5 %}
+        <p>🎉 Amazing! You got 5 out of 6!  So close! — Just one more and it's perfect!</p>
+
+     {% elif score == 3 or score == 4 %}
+        <p>👍 Great job! You got {{score}} out of 6! You're getting the hang of it!</p>
+
+     {% elif score == 1 or score == 2 %}
+        <p>💪 You got {{score}} out of 6! Don't give up — review the lesson and give it another shot!</p>
+
+     {% elif score == 0 %}
+        <p>😊 You got 0 out of 6! Everyone starts somewhere — review and keep going!</p>
+     {% else %}
+         <p>Score not available.</p>
+     {% endif %}
+  </div>
+{% endif %}
+
+
+
+
+<footer>
+ <div class="nav-lessons">
+<p class="left-text"><b>  Current lesson </b></p>
+<p class="right-text"><b> Next lesson plan</b></p>
+</div>
+
+
+<div class="nav-lessons">
+<p class="left-text"><a href="/lists_tuples_sets"> <<< Lists, Tuples, and Sets  </a></p>
+<p class="right-text"><a href="/function_global_variables"> Functions & Global Variables >>></a></p>
+</div>
+
+<p style="text-align: center"><a href="/quiz">Quiz page</a> |
+
+<a href="/lessons">Lessons page</a> |
+
+<a href="/python_tester">Python tester</a></p>
+</footer>
+</body>
+</html>

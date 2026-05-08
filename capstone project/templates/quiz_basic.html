@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+           body {background-color:AliceBlue}
+           h1 {text-align: center;color:CadetBlue;background-color: white;  padding: 15px;}
+           code {display: block;color:black; font-size: 13px;}
+           p {color:DarkCyan;font-size: 18px;}
+           footer {background-color:#c1f0f0;padding: 5px;color:#0f3e3e}
+          .nav-lessons {display: flex; justify-content: space-between;}
+          .nav {display: flex;gap: 10px;}
+          .textbox { background-color: white; padding: 12px; padding-bottom: 20px; border: 1px solid  #c2d6d6; border-radius: 8px;
+           margin: 20px auto; width: 300px; }
+           p code { display: inline;color:black; font-size: 14px;background-color: white;}
+           .score-message { text-align: center; background-color: white; border: 1px solid #c2d6d6; border-radius: 8px;
+            padding: 20px; margin: 20px auto; width: 400px;}
+    </style>
+    <meta charset="UTF-8">
+    <title>Basic of Python Quiz</title>
+</head>
+<body>
+    <h1>Basics of Python Quiz</h1>
+<form method="POST" action="/quiz_basic">
+     <p>1. What file extension do Python files use?</p>
+     <input type="radio" name="q1" value="a"> .txt <br>
+     <input type="radio" name="q1" value="b"> .java <br>
+     <input type="radio" name="q1" value="c"> .py <br>
+     <input type="radio" name="q1" value="d"> .html <br>
+
+     <p class ="nav">2. What does the <code>print()</code> function do?</p>
+     <input type="radio" name="q2" value="a"> Saves a file <br>
+     <input type="radio" name="q2" value="b"> Displays output on the screen <br>
+     <input type="radio" name="q2" value="c"> Creates a variable <br>
+     <input type="radio" name="q2" value="d"> Stops the program <br>
+
+     <p>3. What happens if indentation is wrong?</p>
+     <input type="radio" name="q3" value="a"> Nothing <br>
+     <input type="radio" name="q3" value="b"> The program runs faster <br>
+     <input type="radio" name="q3" value="c"> Python gives an error <br>
+     <input type="radio" name="q3" value="d"> It prints extra text <br>
+
+     <p>4. What is a variable?</p>
+     <input type="radio" name="q4" value="a"> A loop <br>
+     <input type="radio" name="q4" value="b"> A container that stores data <br>
+     <input type="radio" name="q4" value="c"> A function <br>
+     <input type="radio" name="q4" value="d"> A comment <br>
+
+     <p>5. Which variable name is valid?</p>
+     <input type="radio" name="q5" value="a"> 2name <br>
+     <input type="radio" name="q5" value="b"> favorite food<br>
+     <input type="radio" name="q5" value="c"> game_score<br>
+     <input type="radio" name="q5" value="d"> game-score<br>
+
+     <p>6. True or False: Comments are ignored when Python runs the program.</p>
+     <input type="radio" name="q6" value="true"> True <br>
+     <input type="radio" name="q6" value="false"> False <br>
+
+     <br>
+     <br>
+     <br>
+   <button type="submit" style="background-color:CadetBlue; color:white; padding:10px 25px; border:none; border-radius:8px; f
+   ont-size:15px; cursor:pointer;">Submit Quiz</button>
+
+</form>
+{% if score is not none %}
+<div class="score-message">
+     {% if score == 6 %}
+        <p>🌟 Perfect score! You got 6 out of 6! You're a python expert!</p>
+
+     {% elif score == 5 %}
+        <p>🎉 Amazing! You got 5 out of 6!  So close! — Just one more and it's perfect!</p>
+
+     {% elif score == 3 or score == 4 %}
+        <p>👍 Great job! You got {{score}} out of 6! You're getting the hang of it!</p>
+
+     {% elif score == 1 or score == 2 %}
+        <p>💪 You got 2 out of 6! Don't give up — review the lesson and give it another shot!</p>
+
+     {% elif score == 0 %}
+        <p>😊 You got 0 out of 6! Everyone starts somewhere — review and keep going!</p>
+     {% else %}
+         <p>Score not available.</p>
+     {% endif %}
+</div>
+{% endif %}
+</body>
+<footer>
+
+<div class="nav-lessons">
+<p class="left-text"><b> Current lesson </b></p>
+<p class="right-text"><b> Next lesson plan</b></p>
+</div>
+
+<div class="nav-lessons">
+<p class="left-text"><a href="/basicpython"> <<< Basic of Python </a></p>
+<p class="right-text"><a href="/variables">Variables >>></a></p>
+</div>
+
+
+<p style="text-align: center"><a href="/quiz">Quiz page</a> |
+
+<a href="/lessons">Lessons page</a> |
+
+<a href="/python_tester">Python tester</a></p>
+
+</footer>
+</html>

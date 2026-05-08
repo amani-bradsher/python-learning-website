@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+     <style>
+           body {background-color:AliceBlue}
+           h1 {text-align: center;color:CadetBlue;background-color: white;  padding: 15px;}
+           code {display: block;color:black; font-size: 13px;}
+           p {color:DarkCyan;font-size: 18px;}
+           footer {background-color:#c1f0f0;padding: 5px;color:#0f3e3e}
+          .nav-lessons {display: flex; justify-content: space-between;}
+          .nav {display: flex;gap: 10px;}
+           code {display: block;color:black; font-size: 13px;}
+          .textbox { background-color: white; padding: 10px; padding-bottom: 5px; border: 1px solid  #c2d6d6; border-radius: 8px;
+            width: 200px; }
+           p code { display: inline;color:black; font-size: 14px;background-color: white;}
+           .score-message { text-align: center; background-color: white; border: 1px solid #c2d6d6; border-radius: 8px;
+           padding: 20px; margin: 20px auto; width: 400px;}
+     </style>
+    <title>Strings Quiz</title>
+</head>
+<body>
+    <h1>Strings Quiz</h1>
+
+<form method="POST" action="/quiz_strings">
+
+  <p>1. What is a string?</p>
+  <input type="radio" name="q1" value="a"> A number <br>
+  <input type="radio" name="q1" value="b"> Text inside quotation marks <br>
+  <input type="radio" name="q1" value="c"> A loop <br>
+  <input type="radio" name="q1" value="d"> A variable name <br>
+
+  <p>2. Which is a correct string?</p>
+  <input type="radio" name="q2" value="a"> print(Code) <br>
+  <input type="radio" name="q2" value="b"> print("Code") <br>
+  <input type="radio" name="q2" value="c"> print(123) <br>
+  <input type="radio" name="q2" value="d"> print(true) <br>
+
+  <p>3. What does slicing do?</p>
+  <input type="radio" name="q3" value="a"> Deletes a string <br>
+  <input type="radio" name="q3" value="b"> Extracts part of a string <br>
+  <input type="radio" name="q3" value="c"> Converts numbers <br>
+  <input type="radio" name="q3" value="d"> Runs loops <br>
+
+  <p>4. True or False: Python starts counting indexes at 1.</p>
+  <input type="radio" name="q4" value="true"> True <br>
+  <input type="radio" name="q4" value="false"> False <br>
+
+  <p>5. What will be the output of this code?</p>
+  <div class="textbox">
+  <code>color = "blue"</code>
+  <code>print(color[0:2])</code>
+  </div><br>
+  <input type="radio" name="q5" value="a"> blue <br>
+  <input type="radio" name="q5" value="b"> b    <br>
+  <input type="radio" name="q5" value="c"> blu  <br>
+  <input type="radio" name="q5" value="d"> bl   <br>
+
+  <p>6. What do triple quotes do?</p>
+  <input type="radio" name="q6" value="a"> Create numbers <br>
+  <input type="radio" name="q6" value="b"> Allow multi-line strings <br>
+  <input type="radio" name="q6" value="c"> Stop loops <br>
+  <input type="radio" name="q6" value="d"> Print faster <br>
+
+  <p>7. Which method makes text lowercase?</p>
+  <input type="radio" name="q7" value="a"> upper()<br>
+  <input type="radio" name="q7" value="b"> replace()<br>
+  <input type="radio" name="q7" value="c"> lower()<br>
+  <input type="radio" name="q7" value="d"> strip()<br>
+
+  <br>
+  <br>
+  <br>
+<button type="submit" style="background-color:CadetBlue; color:white; padding:10px 25px; border:none; border-radius:8px;
+ font-size:15px; cursor:pointer;">Submit Quiz</button>
+<br>
+    <br>
+</form>
+
+{% if score is not none %}
+    <div class="score-message">
+     {% if score == 7 %}
+        <p>🌟 Perfect plus! You got 7 out of 7! Amazing work!</p>
+
+     {% elif score == 5 or score == 6 %}
+        <p>🎉 So close! You got {{score}} out of 7! Just one more for a perfect score!</p>
+
+     {% elif score == 3 or score == 4 %}
+        <p>👍 Great job! You got {{score}} out of 7! You're getting the hang of it!</p>
+
+     {% elif score == 1 or score == 2 %}
+        <p>💪 You got {{score}} out of 7! Don't give up — review the lesson and give it another shot!</p>
+
+     {% elif score == 0 %}
+        <p>😊 You got 0 out of 7! Everyone starts somewhere — review and keep going!</p>
+     {% else %}
+
+         <p>Score not available.</p>
+     {% endif %}
+     </div>
+{% endif %}
+
+
+
+</body>
+<footer>
+
+<div class="nav-lessons">
+<p class="left-text"><b> Current lesson </b></p>
+<p class="right-text"><b> Next lesson plan</b></p>
+</div>
+
+<div class="nav-lessons">
+<p class="left-text"><a href="/strings"> <<< Strings </a></p>
+<p class="right-text"><a href="/booleans">Booleans >>></a></p>
+</div>
+
+<p style="text-align:center;"><a href="/quiz">Quiz page</a> |
+
+<a href="/lessons">Lessons page</a> |
+
+<a href="/python_tester">Python tester</a></p>
+
+
+
+
+</footer>
+</html>

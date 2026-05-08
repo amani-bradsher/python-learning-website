@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+    body {background-color:AliceBlue}
+    h1 {text-align: center;color:CadetBlue}
+    h3 {text-align: center;color:CadetBlue; font-size: 23px;}
+    h4 {text-align: center;color:CadetBlue}
+    dl {text-align: center;color:DarkCyan}
+    h5 {text-align: center;font-size: 15px}
+    header {background-color:white;padding: 5px;}
+    code {display: block;color:black; font-size: 13px;}
+    p code { display: inline;color:black; font-size: 14px;background-color: white;}
+    p {text-align: center;color:DarkCyan;font-size: 18px;}
+    footer {background-color:#c1f0f0;padding: 5px;color:#0f3e3e}
+    .right-text { text-align: right;margin-right: 50px;}
+    .textbox { background-color: white; padding: 12px; padding-bottom: 20px; border: 1px solid  #c2d6d6; border-radius: 8px;
+     margin: 20px auto; width: 300px; }
+    .nav-lessons {display: flex; justify-content: space-between;}
+
+    </style>
+    <title>Lists</title>
+</head>
+<body>
+<header>
+    <h1>Lists, Tuples, and Sets</h1>
+</header>
+<h3><b>What are lists, sets,and tuples?</b></h3>
+<p>Python has different types of collections for storing data. Three common ones are lists, sets, and tuples, and each <br>
+    one is used in a slightly different way.</p>
+<br>
+
+
+<h3><b>Lists</b></h3>
+<p>A <b>list</b> is an ordered collection of items. Lists are changeable, <br>
+    meaning you can modify them after they are created.</p>
+<p>Lists are written using square brackets <code>[]</code>.</p>
+
+<h5><b>Example:</b></h5>
+<div class="textbox">
+<code>colors = ["red", "blue", "green"]<br>
+    print(colors)
+</code>
+</div>
+<h5><b>Output:</b></h5>
+<div class="textbox">
+    <code>
+        ['red', 'blue', 'green']
+    </code>
+</div>
+<br>
+<br>
+<br>
+
+
+<h3><b>Tuples</b></h3>
+<p>A <b>tuple</b> is similar to a list, but it cannot be changed after it is created. Tuples are called immutable,<br>
+    which means their values stay the same.</p>
+<p>Tuples use parentheses <code>()</code> instead of square brackets.</p>
+
+<h5><b>Example:</b></h5>
+<div class="textbox">
+<code>point = (3, 5)<br>
+print(point)</code>
+</div>
+
+<h5><b>Output:</b></h5>
+<div class="textbox">
+    <code>(3, 5)</code>
+</div>
+
+<p style="color: #a3c2c2; font-size:15px">* If you try to change a value in a tuple, Python will give an error.</p>
+
+<br>
+<br>
+<br>
+
+<h3><b>Sets</b></h3>
+<p>A <b>set</b> is another type of collection that stores multiple values, but it works differently from lists and tuples.<br>
+    Sets do not allow duplicate values, and they do not keep items in a specific order.</p>
+<p><u>Sets have two important rules:</u></p>
+
+  <p>•  Sets are unordered<br>
+     •  Sets do not allow duplicate values</p>
+
+<p>Sets are written using curly brackets <code>{}</code>.</p>
+
+<h5><b>Example:</b></h5>
+<div class="textbox">
+<code>nums = {1, 2, 2, 3}<br>
+      print(nums)
+</code>
+</div>
+
+<h5><b>Output:</b></h5>
+<div class="textbox">
+    <code>
+        {1, 2, 3}
+    </code>
+</div>
+
+<p style="color: #a3c2c2; font-size:15px" >* If you add duplicate values, Python will automatically remove them.<br>
+    That is why the second "2" is not present</p>
+
+<br>
+<br>
+<br>
+
+<h3><b>Ready to quiz your knowledge &#128161</b></h3>
+<p><a href="/quiz_lists" style="background-color:CadetBlue; color:white; padding:10px 25px; border-radius:8px;
+    font-size:16px; text-decoration:none;"> Lists, Tuples, and Sets Quiz</a></p>
+
+<br>
+<br>
+<br>
+<footer>
+
+     <div style="text-align:center; margin:10px;">
+    <p>Ready to practice your coding skills ? 🐍  </p>
+    <a href="/python_tester" style="background-color:CadetBlue; color:white; padding:10px 25px; border-radius:8px;
+    font-size:16px; text-decoration:none;">Click here to try it Yourself!</a>
+</div>
+
+ <div class="nav-lessons">
+<p class="left-text"><b>  Previous lesson </b></p>
+<p class="right-text"><b> Next lesson plan</b></p>
+</div>
+
+<div class="nav-lessons">
+    <a href="/arrays" style="background-color:CadetBlue; color:white; padding:8px 25px; border-radius:50px;
+    font-size:15px; text-decoration:none;"><<< Arrays</a>
+    <a href="/function_global_variables" style="background-color:CadetBlue; color:white; padding:8px 25px;
+     border-radius:50px; font-size:15px; text-decoration:none;">Functions & Global Variables >>></a>
+</div>
+
+<p><a href="/quiz" >Quiz page</a> |
+
+<a href="/">Home page</a> |
+
+<a href="/lessons">Lessons page</a></p>
+
+</footer>

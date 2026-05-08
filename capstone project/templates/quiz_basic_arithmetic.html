@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <style>
+           body {background-color:AliceBlue}
+           h1 {text-align: center;color:CadetBlue;background-color: white;  padding: 15px;}
+           code {display: block;color:black; font-size: 13px;}
+           p {color:DarkCyan;font-size: 18px;}
+           footer {background-color:#c1f0f0;padding: 5px;color:#0f3e3e}
+          .nav-lessons {display: flex; justify-content: space-between;}
+          .nav {display: flex;gap: 10px;}
+          .textbox { background-color: white; padding: 12px; padding-bottom: 20px; border: 1px solid  #c2d6d6; border-radius: 8px;
+            width: 300px; }
+           p code { display: inline;color:black; font-size: 14px;background-color: white;}
+           .score-message { text-align: center; background-color: white; border: 1px solid #c2d6d6; border-radius: 8px;
+            padding: 20px; margin: 20px auto; width: 400px;}
+           .score-message { text-align: center; background-color: white; border: 1px solid #c2d6d6; border-radius: 8px;
+            padding: 20px; margin: 20px auto; width: 400px;}
+
+    </style>
+    <title>Basic Arithmetic Operations Quiz</title>
+</head>
+<body>
+         <h1>Basic Arithmetic Operations Quiz</h1>
+<form method="POST" action="/quiz_basic_arithmetic">
+
+     <p>1.	What will this code output?</p>
+           <div class="textbox">
+           <code>print(4 + 3)</code>
+           </div>
+     <input type="radio" name="q1" value="a"> 1 <br>
+     <input type="radio" name="q1" value="b"> 7 <br>
+     <input type="radio" name="q1" value="c"> 12 <br>
+     <input type="radio" name="q1" value="d"> 43 <br><br>
+
+
+     <p>2. What does <code>//</code> do?</p>
+     <input type="radio" name="q2" value="a"> Decimal division <br>
+     <input type="radio" name="q2" value="b"> Floor division <br>
+     <input type="radio" name="q2" value="c"> Multiplication <br>
+     <input type="radio" name="q2" value="d"> Modulus <br><br>
+
+
+     <p>3. True or False: <code>%</code> gives the remainder.</p>
+     <input type="radio" name="q3" value="true"> True <br>
+     <input type="radio" name="q3" value="false"> False <br>
+
+
+     <p>4.	What does <code>**</code> do?</p>
+     <input type="radio" name="q4" value="a"> Multiply <br>
+     <input type="radio" name="q4" value="b"> Divide <br>
+     <input type="radio" name="q4" value="c"> Exponents <br>
+     <input type="radio" name="q4" value="d"> Add <br><br>
+
+
+     <p>5. If <code>x = 10</code> and <code>y = 5</code>, what will this print?</p>
+     <div class="textbox">
+     <code>print(x * y)</code>
+     </div>
+     <input type="radio" name="q5" value="a"> 15 <br>
+     <input type="radio" name="q5" value="b"> 50 <br>
+     <input type="radio" name="q5" value="c"> 2 <br>
+     <input type="radio" name="q5" value="d"> 5 <br><br>
+
+
+
+     <p>6. What is the result of <code>8 / 2</code>?</p>
+     <input type="radio" name="q6" value="a"> 4 <br>
+     <input type="radio" name="q6" value="b"> 4.0 <br>
+     <input type="radio" name="q6" value="c"> 2 <br>
+     <input type="radio" name="q6" value="d"> 8 <br><br>
+
+
+     <p>7. What will this output?</p>
+     <div class="textbox">
+     <code>print(2 + 3 * 4)</code>
+     </div>
+     <input type="radio" name="q7" value="a"> 20 <br>
+     <input type="radio" name="q7" value="b"> 14 <br>
+     <input type="radio" name="q7" value="c"> 24 <br>
+     <input type="radio" name="q7" value="d"> 9 <br><br>
+     <br>
+     <br>
+     <br>
+     <button type="submit" style="background-color:CadetBlue; color:white; padding:10px 25px; border:none; border-radius:8px; font-size:15px; cursor:pointer;">Submit Quiz</button>
+
+</form>
+{% if score is not none %}
+    <div class="score-message">
+     {% if score == 7 %}
+        <p>🌟 Perfect plus! You got 7 out of 7! Amazing work!</p>
+
+     {% elif score == 5 or score == 6 %}
+        <p>🎉 So close! You got {{score}} out of 7! Just one more for a perfect score!</p>
+
+     {% elif score == 3 or score == 4 %}
+        <p>👍 Great job! You got {{score}} out of 7! You're getting the hang of it!</p>
+
+     {% elif score == 1 or score == 2 %}
+        <p>💪 You got {{score}} out of 7! Don't give up — review the lesson and give it another shot!</p>
+
+     {% elif score == 0 %}
+        <p>😊 You got 0 out of 7! Everyone starts somewhere — review and keep going!</p>
+     {% else %}
+
+         <p>Score not available.</p>
+     {% endif %}
+     </div>
+{% endif %}
+
+
+</body>
+<footer>
+  <div class="nav-lessons">
+<p class="left-text"><b>  Current lesson </b></p>
+<p class="right-text"><b> Next lesson plan</b></p>
+</div>
+
+<div class="nav-lessons">
+<p class="left-text"><a href="/basic_arithmetic_operations"> <<< Basic arithmetic operations </a></p>
+<p class="right-text"><a href="/loops"> Loops + If Statements >>></a></p>
+</div>
+
+<p style="text-align: center"><a href="/quiz">Quiz page</a> |
+
+<a href="/lessons">Lessons page</a> |
+
+<a href="/python_tester">Python tester</a></p>
+</footer>
+</html>

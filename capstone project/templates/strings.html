@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+    body {background-color:AliceBlue}
+    h1 {text-align: center;color:CadetBlue}
+    h3 {text-align: center;color:CadetBlue; font-size: 23px;}
+    h4 {text-align: center;color:CadetBlue}
+    dl {text-align: center;color:DarkCyan}
+    h5 {text-align: center;font-size: 15px}
+    header {background-color:white;padding: 5px;}
+    code {display: block;color:black; font-size: 13px;}
+    p code { display: inline;color:black; font-size: 14px;background-color: white;}
+    p {text-align: center;color:DarkCyan;font-size: 18px;}
+    footer {background-color:#c1f0f0;padding: 5px;color:#0f3e3e}
+    .right-text { text-align: right;margin-right: 50px;}
+    .textbox { background-color: white; padding: 12px; padding-bottom: 20px; border: 1px solid  #c2d6d6; border-radius: 8px;
+     margin: 20px auto; width: 300px; }
+    .nav-lessons {display: flex; justify-content: space-between;}
+
+
+</style>
+    <title>Strings</title>
+</head>
+<body>
+    <header>
+    <h1>Strings</h1>
+    </header>
+
+    <h3><b>What are Strings?</b></h3>
+    <p>A <b>string</b> is text inside quotation marks. Strings are used to store words, sentences, or any characters <br>
+        like letters, numbers, and symbols. They are one of the most common data types in Python and are often used for<br>
+        things like names, messages, and user input. </p>
+<dl>
+    <dt><b>Strings can contain:</b></dt>
+    <dd>-  Letters &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</dd>
+    <dd>-  Numbers &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</dd>
+    <dd>-  Spaces  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</dd>
+    <dd>-  Symbols &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</dd>
+</dl>
+
+
+<h5><b>Example:</b></h5>
+<div class="textbox">
+<code>print("Code is fun")<br>
+print('Code is fun')
+</code>
+</div>
+<p>Both of these will work and produce the same output. In Python, you can use either double quotes <code>"</code>or single<br>
+    quotes <code>'</code> to create strings, as long as they match at the beginning and end.</p>
+
+<h5><b>Output:</b></h5>
+<div class="textbox">
+<code>Code is fun<br>
+    Code is fun</code>
+</div>
+
+<br>
+<br>
+<br>
+
+<h3><b>Slicing Strings</b></h3>
+
+    <p><b>Slicing</b> allows you to extract part of a string by using index numbers. This means you can take only certain <br>
+    characters from a string instead of using the whole thing. It is useful when you only need a specific part <br>
+    of the text.</p>
+
+<h5><b>Example:</b></h5>
+<div class="textbox">
+<code>text = "Programming"<br>
+print(text[0:6])<br></code>
+</div>
+
+<h5><b>Output:</b></h5>
+<div class="textbox">
+<code>Progra<br>
+</code>
+</div>
+
+<p>In programming, counting doesn’t start at 1 like usually, it starts at 0.<br>
+    This is called <b>zero-based</b> indexing.</p>
+
+<h5><b>Here's it broken down some more :</b></h5>
+<p><code>  0&nbsp;| 1&nbsp;| 2&nbsp;|  3&nbsp;|   4&nbsp;|   5&nbsp;|   6&nbsp;|   7&nbsp;|   8&nbsp;|   9&nbsp;|  10<br>
+        &nbsp;p&nbsp;| r&nbsp;| o&nbsp;|  g&nbsp;|  r&nbsp;|   a&nbsp;|   m&nbsp;|   m&nbsp;|   i&nbsp;|   n&nbsp;|   g&nbsp;&nbsp;
+</code></p>
+
+<br>
+
+<h3><b>String Concatenation</b></h3>
+      <p><b>Concatenation</b> means joining two or more strings together to make one longer string. It is often done<br>
+          using the <code>+</code> <b>operator</b> to combine words or text.</p>
+
+<h5><b>Example:</b></h5>
+<div class="textbox">
+<code>first = "Hello"<br>
+second = "World"<br>
+print(first + " " + second)
+</code>
+</div>
+
+<p style="color: #a3c2c2; font-size:15px">* The <code>" "</code> just puts space between the two</p>
+<br>
+
+    <h5><b>Output:</b></h5>
+<div class="textbox">
+<code>Hello World</code>
+</div>
+
+<br>
+<br>
+<br>
+
+
+<h3><b>Multi-line Strings</b></h3>
+      <p><b>Multi-line strings</b> use triple quotes (<code>'''</code> or <code>"""</code>) to write text across multiple lines.<br>
+          They make your code cleaner and easier to read without needing <code>\n</code>.
+
+<h5><b>Example:</b></h5>
+<div class="textbox">
+<code>
+A = """ hello I am Jake <br>
+I like dogs"""
+</code>
+</div>
+
+
+<h5><b>Output:</b></h5>
+<div class="textbox">
+<code>hello I am Jake <br>
+       i like dogs</code>
+</div>
+
+<p  style="color: #a3c2c2; font-size:15px"> * This is useful when writing log messages or paragraphs</p>
+
+<br>
+
+
+<h3><b>Useful String Methods</b></h3>
+      <p>Python has built-in tools called methods that help you change and work with strings. They let you do things <br>
+          like make text uppercase or lowercase, remove spaces, or replace words, making it easier to edit text.</p>
+<br>
+<p><b>Useful methods:</b></p>
+<p>
+   <code>lower()</code>  - makes text lowercase<br>
+   <code>upper()</code>  - makes text uppercase <br>
+   <code>replace()</code> - replaces part of a string <br>
+   <code>strip()</code>  - removes extra spaces </p>
+
+<br>
+
+<h5><b>Example:</b></h5>
+<div class="textbox">
+<code>text = "PYTHON"<br>
+print(text.lower())
+</code>
+</div>
+<h5><b>Output:</b></h5>
+<div class="textbox">
+<code>python</code>
+</div>
+
+<br>
+
+<h3><b>Ready to quiz your knowledge &#128161</b></h3>
+<p><a href="/quiz_strings" style="background-color:CadetBlue; color:white; padding:10px 25px; border-radius:8px;
+    font-size:16px; text-decoration:none;"> Strings Quiz</a></p>
+<br>
+<br>
+<br>
+
+<footer>
+
+     <div style="text-align:center; margin:10px;">
+    <p>Ready to practice your coding skills ? 🐍  </p>
+    <a href="/python_tester" style="background-color:CadetBlue; color:white; padding:10px 25px; border-radius:8px;
+    font-size:16px; text-decoration:none;">Click here to try it Yourself!</a>
+</div>
+
+<div class="nav-lessons">
+<p class="left-text"><b> Previous lesson </b></p>
+<p class="right-text"><b> Next lesson plan</b></p>
+</div>
+
+<div class="nav-lessons">
+    <a href="/variables" style="background-color:CadetBlue; color:white; padding:8px 25px; border-radius:50px;
+     font-size:15px; text-decoration:none;"><<< Variables</a>
+    <a href="/booleans" style="background-color:CadetBlue; color:white; padding:8px 25px; border-radius:50px;
+    font-size:15px; text-decoration:none;">Booleans >>></a>
+</div>
+
+<p><a href="/quiz" >Quiz page</a> |
+
+<a href="/">Home page</a> |
+
+<a href="/lessons">Lessons page</a></p>
+
+
+
+</footer>

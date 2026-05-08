@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+    body {background-color:AliceBlue}
+    h1 {text-align: center;color:CadetBlue}
+    h3 {text-align: center;color:CadetBlue; font-size: 23px;}
+    h4 {text-align: center;color:CadetBlue}
+    dl {text-align: center;color:DarkCyan}
+    h5 {text-align: center;font-size: 15px}
+    header {background-color:white;padding: 5px;}
+    code {display: block;color:black; font-size: 13px;}
+    p code { display: inline;color:black; font-size: 14px;background-color: white;}
+    p {text-align: center;color:DarkCyan;font-size: 18px;}
+    footer {background-color:#c1f0f0;padding: 5px;color:#0f3e3e}
+    .right-text { text-align: right;margin-right: 50px;}
+    .textbox { background-color: white; padding: 12px; padding-bottom: 20px; border: 1px solid  #c2d6d6; border-radius: 8px;
+     margin: 20px auto; width: 300px; }
+    .nav-lessons {display: flex; justify-content: space-between;}
+    </style>
+    <title>Loops</title>
+</head>
+<body>
+<header>
+    <h1>Loops and if statements </h1>
+</header>
+
+<h3><b>What are if statement ?</b></h3>
+    <p><b>If statements</b> allow a program to make decisions based on conditions. An if statement normally checks
+        if a condition is true before running code. </p>
+
+
+<h5><b> if statement example :</b></h5>
+    <p></p>
+<div class="textbox">
+<code>age = 19<br>
+if age >= 18:<br>
+    &nbsp; &nbsp; print("You can vote")
+</code>
+</div>
+
+<h5><b>Output:</b></h5>
+<div class="textbox">
+    <code>You can vote</code>
+</div>
+<br>
+    <p>If the condition is true, the message prints.
+You can also use <b>else</b>.</p>
+
+    <h5><b> if statement + else Example:</b></h5>
+<div class="textbox">
+<code>age = 17<br>
+      if age >= 18:<br>
+      &nbsp; &nbsp; print("You can vote")<br>
+    else:<br>
+    &nbsp; &nbsp; print("You are too young to vote")
+    </code>
+</div>
+
+
+
+ <h5><b>Output:</b></h5>
+<div class="textbox">
+    <code>You are too young to vote</code>
+</div>>
+<br>
+<br>
+<br>
+
+<h3><b>What are loops ?</b></h3>
+    <p> <b>Loops</b> repeat code automatically instead of writing the same line many times. They make programs shorter and <br>
+        easier to read. Instead of repeating code, a loop runs it for you multiple times, which is helpful for things <br>
+        like counting or going through items in a list.</p>
+<br>
+<br>
+
+    <h3><b>For Loops</b></h3>
+    <p>A <b>for loop</b> is used when you want code to repeat a certain number of times. Instead of writing the <br>
+        same line of code over and over, a loop can do it automatically.<br>
+        <br>
+A for loop goes through a sequence of values and runs the code once for each value.
+</p>
+    <h5><b>For loop example</b>:</h5>
+<div class="textbox">
+<code>for x in range(3):<br>
+        &nbsp; &nbsp;print("Learning Python")<br>
+</code>
+</div>
+
+    <h5><b>Output:</b></h5>
+<div class="textbox">
+    <code>Learning Python<br>
+Learning Python<br>
+Learning Python</code>
+</div>
+
+    <p>In this example, the <b>range(3)</b> tells Python to repeat the loop <b>three times</b>.<br>
+The variable x is used to keep track of each loop iteration. Python automatically changes
+        the value of x each time the loop runs.
+    </p>
+<br>
+<h5><b>Example showing the value of x:</b></h5>
+<div class="textbox">
+<code>for x in range(3):<br>
+    &nbsp; &nbsp;print(x)
+</code>
+</div>
+
+    <h5><b>Output:</b></h5>
+<div class="textbox">
+    <code>0<br>
+        1<br>
+        2
+    </code>
+</div>
+    <p>Python starts counting at 0, which is why the numbers go from 0 to 2 instead of 1 to 3.
+For loops are often used when working with lists, ranges, or repeating tasks.
+</p>
+<br>
+<br>
+<br>
+<h3><b>While Loops</b></h3>
+    <p>A <b>while loop</b> repeats code as long as a condition is true. This means the loop will keep<br>
+        running until the condition becomes false.</p>
+
+
+<h5><b>Example:</b></h5>
+<div class="textbox">
+<code>count = 1<br>
+while count < 4:<br>
+    &nbsp; &nbsp;print(count)<br>
+    &nbsp; &nbsp;count += 1<br>
+</code>
+</div>
+
+<p><b>In this example:</b><br>
+<br>
+  •  The variable <b>count</b> starts at 1<br>
+  •  The loop runs <b>while count is less than 4</b><br>
+  •  Each time the loop runs, <b>count increases by 1</b>
+</p>
+    <br>
+    <p>This is important because it eventually makes the condition false, which stops the loop.
+If the value never changes, the loop would run forever. This is called an infinite loop.
+</p>
+
+
+<h5><b>Example of an infinite loop:</b></h5>
+<div class="textbox">
+<code>while True: <br>
+    &nbsp; &nbsp;print("This will run forever")
+</code>
+</div>
+
+
+
+
+<p>Because the condition is always True, the loop never stops.<br>
+    Now it will forever print the outcome of "<code>This will run forever</code>" until the program is turned off.</p>
+
+<br>
+<br>
+<br>
+    <h3><b>Ready to quiz your knowledge &#128161</b></h3>
+      <p><a href="/quiz_loops" style="background-color:CadetBlue; color:white; padding:10px 25px; border-radius:8px;
+    font-size:16px; text-decoration:none;"> Loops + if statement Quiz</a></p>
+
+<br>
+<br>
+<br>
+</body>
+
+<footer>
+
+      <div style="text-align:center; margin:10px;">
+    <p>Ready to practice your coding skills ? 🐍  </p>
+    <a href="/python_tester" style="background-color:CadetBlue; color:white; padding:10px 25px; border-radius:8px;
+    font-size:16px; text-decoration:none;">Click here to try it Yourself!</a>
+</div>
+
+<div class="nav-lessons">
+<p class="left-text"><b>  Previous lesson </b></p>
+<p class="right-text"><b> Next lesson plan</b></p>
+</div>
+
+<div class="nav-lessons">
+    <a href="/basic_arithmetic_operations" style="background-color:CadetBlue; color:white; padding:8px 25px;
+     border-radius:50px; font-size:15px; text-decoration:none;"><<< Basic Arithmetic Operations</a>
+    <a href="/range" style="background-color:CadetBlue; color:white; padding:8px 25px; border-radius:50px;
+    font-size:15px; text-decoration:none;">Range >>></a>
+</div>
+
+<p><a href="/quiz" >Quiz page</a> |
+
+<a href="/">Home page</a> |
+
+<a href="/lessons">Lessons page</a></p>
+
+
+</footer>

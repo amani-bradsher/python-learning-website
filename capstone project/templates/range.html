@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+    body {background-color:AliceBlue}
+    h1 {text-align: center;color:CadetBlue}
+    h3 {text-align: center;color:CadetBlue; font-size: 23px;}
+    h4 {text-align: center;color:CadetBlue}
+    dl {text-align: center;color:DarkCyan}
+    h5 {text-align: center;font-size: 15px}
+    header {background-color:white;padding: 5px;}
+    code {display: block;color:black; font-size: 13px;}
+    p code { display: inline;color:black; font-size: 14px;background-color: white;}
+    p {text-align: center;color:DarkCyan;font-size: 18px;}
+    footer {background-color:#c1f0f0;padding: 5px;color:#0f3e3e}
+    .right-text { text-align: right;margin-right: 50px;}
+    .textbox { background-color: white; padding: 12px; padding-bottom: 20px; border: 1px solid  #c2d6d6; border-radius: 8px;
+     margin: 20px auto; width: 300px; }
+    .nav-lessons {display: flex; justify-content: space-between;}
+
+    </style>
+    <title>Range</title>
+</head>
+<body>
+<header>
+    <h1>Range</h1>
+</header>>
+<h3><b>What is a range? </b></h3>
+<p>The <code>range()</code> function is used to generate a sequence of numbers. It is most commonly used with loops, especially <br>
+   <b>for loops</b>, to repeat code a specific number of times. It helps control how many times the loop runs and can also set a starting and ending point for the numbers.</p>
+
+<h5><b>Example:</b></h5>
+<div class="textbox">
+<code>for i in range(5):<br>
+    &nbsp; &nbsp;print(i)</code>
+</div>
+<p><b>Output:</b></p>
+<div class="textbox">
+<code>0<br>1<br>2<br>3<br>4</code>
+</div>
+<br>
+<br>
+<br>
+
+<h3><b>Starting and ending values</b></h3>
+<p>You can also tell Python where the range should start. By giving <b>range()</b> two numbers, you can set both the starting <br>
+    and ending values, which gives you more control over the loop.</p>
+
+<h5><b>Example:</b></h5>
+<div class="textbox">
+<code>for i in range(2, 6):<br>
+    &nbsp; &nbsp;print(i)</code>
+</div>
+<p><b>Output:</b></p>
+<div class="textbox">
+<code>2<br>3<br>4<br>5</code>
+</div>
+
+<p>The first number (2) is the starting point, and the second number (6) is the stopping point.<br>
+    The stopping number is not included.</p>
+
+<br>
+<br>
+<br>
+
+<h3><b>Using range with lists</b></h3>
+<p><code>range()</code> can also be used to loop through items in a list. Instead of going through each item directly, it lets you <br>
+    loop using the index positions of the list.</p>
+
+<h5><b>Example:</b></h5>
+<div class="textbox">
+<code>fruits = ["apple", "banana", "orange"]<br>
+    for i in range(len(fruits)):<br>
+    &nbsp; &nbsp;print(fruits[i])</code>
+</div>
+<p>In this example, <code>len(fruits)</code> tells Python how many items are in the list, and the loop prints each one.</p>
+
+
+<h5>Output:</h5>
+<div class="textbox">
+    <code>
+        apple<br>
+        banana<br>
+        orange<br>
+    </code>
+</div>
+<br>
+
+    <p><b>Explanations:</b></p>
+<p>
+          • <code>len(fruits)</code> gives the number of items in the list<br>
+          • <code>range(len(fruits))</code> creates a sequence of numbers like 0, 1, 2<br>
+          • <code>i</code> is used as an index, which means it tells Python which position <br>
+          &nbsp;&nbsp;&nbsp;&nbsp;in the list to look at.<br>
+          • <code>fruits[i]</code> gets the item at that position:<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;* when <code>i = 0</code> → "apple"<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;* when <code>i = 1</code> → "banana"<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;* when <code>i = 2</code> → "orange"<br>
+</p>
+
+<br>
+<br>
+<br>
+<h3><b>Why range is useful</b></h3>
+<p>The <code>range()</code> function helps programmers:</p>
+<p>
+  •	 Repeat code a specific number of times<br>
+  •	 Work with numbered sequences<br>
+  •	 Loop through lists or data sets<br>
+</p>
+<p style="color: #a3c2c2; font-size:15px">Range is commonly used in programs that require counting, repeating actions, or processing multiple pieces of data.</p>
+
+<br>
+<br>
+<br>
+
+<h3><b>Ready to quiz your knowledge &#128161</b></h3>
+<p><a href="/quiz_range" style="background-color:CadetBlue; color:white; padding:10px 25px; border-radius:8px;
+    font-size:16px; text-decoration:none;">  Range Quiz</a></p>
+
+<br>
+<br>
+<br>
+<footer>
+
+     <div style="text-align:center; margin:10px;">
+    <p>Ready to practice your coding skills ? 🐍  </p>
+    <a href="/python_tester" style="background-color:CadetBlue; color:white; padding:10px 25px; border-radius:8px;
+    font-size:16px; text-decoration:none;">Click here to try it Yourself!</a>
+</div>
+
+<div class="nav-lessons">
+<p class="left-text"><b>  Previous lesson </b></p>
+<p class="right-text"><b> Next lesson plan</b></p>
+</div>
+
+<div class="nav-lessons">
+    <a href="/loops" style="background-color:CadetBlue; color:white; padding:8px 25px; border-radius:50px;
+    font-size:15px; text-decoration:none;"><<< Loops + If Statements</a>
+    <a href="/arrays" style="background-color:CadetBlue; color:white; padding:8px 25px; border-radius:50px;
+    font-size:15px; text-decoration:none;">Arrays >>></a>
+</div>
+
+<p><a href="/quiz" >Quiz page</a> |
+
+<a href="/">Home page</a> |
+
+<a href="/lessons">Lessons page</a></p>
+
+
+
+</footer>

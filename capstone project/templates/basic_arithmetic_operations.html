@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+    body {background-color:AliceBlue}
+    h1 {text-align: center;color:CadetBlue}
+    h3 {text-align: center;color:CadetBlue; font-size: 23px;}
+    h4 {text-align: center;color:CadetBlue}
+    dl {text-align: center;color:DarkCyan}
+    h5 {text-align: center;font-size: 15px}
+    header {background-color:white;padding: 5px;}
+    code {display: block;color:black; font-size: 13px;}
+    p code { display: inline;color:black; font-size: 14px;background-color: white;}
+    p {text-align: center;color:DarkCyan;font-size: 18px;}
+    footer {background-color:#c1f0f0;padding: 5px;color:#0f3e3e}
+    .right-text { text-align: right;margin-right: 50px;}
+    .textbox { background-color: white; padding: 12px; padding-bottom: 20px; border: 1px solid  #c2d6d6; border-radius: 8px;
+     margin: 20px auto; width: 300px; }
+    .nav-lessons {display: flex; justify-content: space-between;}
+</style>
+
+    <title>Basic Arithmetic </title>
+</head>
+<body>
+<header>
+    <h1>Basic Arithmetic Operations</h1>
+</header>
+<br>
+<h3><b>Python Math operations </b></h3>
+    <p>Python can perform many <b>mathematical operations</b>, just like a calculator.This means you can use Python to solve<br>
+      math problems such as addition, subtraction, multiplication, and division. Instead of using a physical calculator,<br>
+      you can type the problem into Python and it will give you the answer instantly.
+      <br></p>
+    <br>
+<style>
+table {
+  border-collapse: collapse;
+  width: 70%;
+  margin: 0 auto; /* centers the table */
+
+
+}
+
+th, td {
+  border: 1px solid #669999;
+  padding: 8px;
+  text-align: center;
+
+}
+</style>
+
+<h3 style="text-align:center;color:#5c8a8a;"><b>Basic math operations</b></h3>
+
+<table>
+  <tr style="color:#5c8a8a">
+    <th>Operation</th>
+    <th>Example</th>
+    <th>Output</th>
+    <th>Description</th>
+  </tr>
+
+  <tr>
+    <td>Addition</td>
+    <td><code>print(4 + 3)</code></td>
+    <td>7</td>
+    <td>Adds numbers</td>
+  </tr>
+
+  <tr>
+    <td>Subtraction</td>
+    <td><code>print(10 - 4)</code></td>
+    <td>6</td>
+    <td>Subtracts numbers</td>
+  </tr>
+
+  <tr>
+    <td>Multiplication</td>
+    <td><code>print(6 * 2)</code></td>
+    <td>12</td>
+    <td>Multiplies numbers</td>
+  </tr>
+
+  <tr>
+    <td>Division</td>
+    <td><code>print(5 / 3)</code></td>
+    <td>1.6667</td>
+    <td>Normal division(float)</td>
+  </tr>
+
+  <tr>
+    <td>Floor Division</td>
+    <td><code>print(5 // 3)</code></td>
+    <td>1</td>
+    <td>Integer division (rounds down)</td>
+  </tr>
+
+  <tr>
+    <td>Modulus</td>
+    <td><code>print(5 % 3)</code></td>
+    <td>2</td>
+    <td>Remainder</td>
+  </tr>
+
+</table>
+
+<br>
+<br>
+
+<h3><b>Order of Operations</b></h3>
+    <p>Python follows the <b>order of operations</b> (PEMDAS), just like in math. This means that some operations are done before <br>
+      others. For example, multiplication and division are done before addition and subtraction unless you use parentheses. </p>
+
+<h5><b>Example:</b></h5>
+<div class="textbox">
+<code>print(2 + 3 * 4)   </code>
+</div>
+<p>Even though it might look like you should add first, Python multiplies first:<br>
+•	3 * 4 = 12 <br>
+•	then 2 + 12 = 14
+</p>
+
+<p>If you want the addition to happen first, you can use parentheses to change the order:</p>
+
+<h5><b>Example:</b></h5>
+<div class="textbox">
+    <code>print((2 + 3) * 4)   </code>
+</div>
+
+<h5><b>Output:</b></h5>
+<div class="textbox">
+  <code>20</code>
+</div>
+
+<p>Parentheses tell Python what to solve first, just like in regular math. This is important because it can completely <br>
+  change your answer.</p>
+<br>
+<br>
+<br>
+
+<h3><b>Math With Variables</b></h3>
+    <p>You can also use variables in math calculations. Variables let you store numbers and then use them in math problems <br>
+      later. Think of a variable like a labeled box that holds a value.</p>
+<h5><b>Example:</b></h5>
+<div class="textbox">
+<code>
+x = 10<br>
+y = 5<br>
+print(x + y)<br>
+</code>
+</div>
+
+
+<h5><b>Output:</b></h5>
+<div class="textbox">
+  <code>15</code>
+</div>
+
+<br>
+    <br>
+    <br>
+
+
+<h3><b>Updating Variables</b></h3>
+    <p>Variables can change as your program runs. This means you can update a value instead of making a new variable each time</p>
+
+<h5><b>Example:</b></h5>
+<div class="textbox">
+<code>x = 10<br>
+x = x + 5<br>
+print(x)
+</code>
+</div>
+
+<h5><b>Output:</b></h5>
+<div class="textbox">
+<code>15</code>
+</div>
+
+<p>In this example, Python takes the current value of x, adds 5, and stores the new value back into x.</p>
+
+<p>You can also write this in a shorter way:</p>
+<div class="textbox">
+<code>
+  x = 10<br>
+x += 5<br>
+print(x)
+</code>
+</div>
+
+<p>Updating variables is useful for keeping track of things like scores, totals, or counts in a program.</p>
+
+<br>
+<br>
+
+<h3><b>Ready to quiz your knowledge &#128161</b></h3>
+<p><a href="/quiz_basic_arithmetic" style="background-color:CadetBlue; color:white; padding:10px 25px; border-radius:8px;
+    font-size:16px; text-decoration:none;">  Basic Arithmetic Operations Quiz</a></p>
+
+<br>
+<br>
+<br>
+
+<footer>
+
+     <div style="text-align:center; margin:10px;">
+    <p>Ready to practice your coding skills ? 🐍  </p>
+    <a href="/python_tester" style="background-color:CadetBlue; color:white; padding:10px 25px; border-radius:8px;
+    font-size:16px; text-decoration:none;">Click here to try it Yourself!</a>
+</div>
+
+  <div class="nav-lessons">
+<p class="left-text"><b>  Previous lesson </b></p>
+<p class="right-text"><b> Next lesson plan</b></p>
+</div>
+
+<div class="nav-lessons">
+    <a href="/booleans" style="background-color:CadetBlue; color:white; padding:8px 25px; border-radius:50px;
+    font-size:15px; text-decoration:none;"><<< Booleans</a>
+    <a href="/loops" style="background-color:CadetBlue; color:white; padding:8px 25px; border-radius:50px;
+    font-size:15px; text-decoration:none;">Loops + If Statements >>></a>
+</div>
+
+
+<p><a href="/quiz" >Quiz page</a> |
+
+<a href="/">Home page</a> |
+
+<a href="/lessons">Lessons page</a></p>
+
+
+</footer>

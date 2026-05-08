@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+    body {background-color:AliceBlue}
+    h1 {text-align: center;color:CadetBlue}
+    h3 {text-align: center;color:CadetBlue; font-size: 23px;}
+    h4 {text-align: center;color:CadetBlue}
+    dl {text-align: center;color:DarkCyan}
+    h5 {text-align: center;font-size: 15px}
+    header {background-color:white;padding: 5px;}
+    code {display: block;color:black; font-size: 13px;}
+    p code { display: inline;color:black; font-size: 14px;background-color: white;}
+    p {text-align: center;color:DarkCyan;font-size: 18px;}
+    footer {background-color:#c1f0f0;padding: 5px;color:#0f3e3e}
+    .right-text { text-align: right;margin-right: 50px;}
+    .textbox { background-color: white; padding: 12px; padding-bottom: 20px; border: 1px solid  #c2d6d6; border-radius: 8px;
+     margin: 20px auto; width: 300px; }
+    .nav-lessons {display: flex; justify-content: space-between;}
+
+    </style>
+    <title>arrays</title>
+</head>
+<body>
+<header>
+    <h1>Arrays</h1>
+</header>
+<h3><b>What are arrays?</b></h3>
+<p>An <b>array</b> is a way to store multiple values inside one variable instead of creating many separate variables. <br>
+    Arrays are useful when you are working with a group of related data.</p>
+
+<h5><b>For example, instead of doing this:</b></h5>
+<div class="textbox">
+<code>score1 = 85<br>
+    score2 = 90<br>
+    score3 = 78</code>
+</div>
+
+<h5>You can store them together in one array:</h5>
+<div class="textbox">
+<code>scores = [85, 90, 78]</code>
+</div>
+<br>
+<br>
+<br>
+
+
+<h3>Arrays in Python</h3>
+
+<p>In Python, <b>arrays</b> are usually created using lists. Lists act like arrays because they can hold multiple values <br>
+    in one place.<br>
+    The values inside an array are called <b>elements</b>, and each element has a position number called an index.<br>
+Python starts counting indexes at 0 instead of 1.</p>
+
+
+<h5><b>Example:</b></h5>
+<div class="textbox">
+<code>fruits = ["apple", "banana", "orange"]<br>
+    print(fruits[0])</code>
+</div>
+
+    <h5><b>Output:</b></h5>
+<div class="textbox">
+    <code>["apple", "grape", "orange"]</code>
+</div>
+    <p><b>Explanation:</b></p>
+<p>• The list starts with "banana" in position 1<br>
+   • We change that value to "grape"<br>
+   • The list updates right away without creating a new one</p>
+<br>
+<br>
+<br>
+
+<h3><b>Changing values in an array</b></h3>
+<p>Arrays in Python can be modified, which means you can change values even after the list has already been created. <br>
+    This is possible because lists are <b>changeable</b>, so you don’t need to create a new list just to update something.</p>
+
+
+<h5><b>Example:</b></h5>
+<div class="textbox">
+<code>fruits = ["apple", "banana", "orange"]<br>
+    fruits[1] = "grape"<br>
+    print(fruits)</code>
+</div>
+
+<h5>Output:</h5>
+<div class="textbox">
+<code>
+    ['apple', 'grape', 'orange']
+</code>
+</div>
+<br>
+<br>
+<br>
+
+
+<h3><b>Looping through an array</b></h3>
+<p>Arrays in Python are often used with loops to go through each item one at a time. This helps you work with every<br>
+    value in the list without having to write separate code for each one.</p>
+
+    <p><b>Explanation:</b></p>
+
+<p>• The loop goes through each item in the list<br>
+• Each item gets stored in the variable fruit<br>
+• The print() line runs once for every item</p>
+
+
+<h5><b>Example:</b></h5>
+<div class="textbox">
+<code>fruits = ["apple", "banana", "orange"]<br>
+    for fruit in fruits:<br>
+    &nbsp; &nbsp;print(fruit)</code>
+</div>
+
+<h5><b>Output:</b></h5>
+<div class="textbox">
+<code>apple<br>
+banana<br>
+orange<br>
+</code>
+</div>
+
+<br>
+<br>
+<br>
+
+<h3><b>Ready to quiz your knowledge &#128161</b></h3>
+<p><a href="/quiz_arrays" style="background-color:CadetBlue; color:white; padding:10px 25px; border-radius:8px;
+    font-size:16px; text-decoration:none;"> Arrays Quiz</a></p>
+<br>
+<br>
+<br>
+
+
+<footer>
+   <div style="text-align:center; margin:10px;">
+    <p>Ready to practice your coding skills ? 🐍  </p>
+    <a href="/python_tester" style="background-color:CadetBlue; color:white; padding:10px 25px; border-radius:8px;
+    font-size:16px; text-decoration:none;">Click here to try it Yourself!</a>
+</div>
+
+<div class="nav-lessons">
+    <p><b>Previous lesson</b></p>
+    <p><b>Next lesson plan</b></p>
+</div>
+
+<div class="nav-lessons">
+    <a href="/range" style="background-color:CadetBlue; color:white; padding:8px 25px; border-radius:50px; font-size:15px;
+    text-decoration:none;"><<< Range</a>
+    <a href="/lists_tuples_sets" style="background-color:CadetBlue; color:white; padding:8px 25px; border-radius:50px;
+    font-size:15px; text-decoration:none;">Lists, Tuples, and Sets >>></a>
+</div>
+
+
+<p><a href="/quiz" >Quiz page</a> |
+
+<a href="/">Home page</a> |
+
+<a href="/lessons">Lessons page</a></p>
+
+
+
+
+</footer>

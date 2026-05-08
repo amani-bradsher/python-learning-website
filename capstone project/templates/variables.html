@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+    body {background-color:AliceBlue}
+    h1 {text-align: center;color:CadetBlue}
+    h3 {text-align: center;color:CadetBlue; font-size: 23px;}
+    h4 {text-align: center;color:CadetBlue}
+    dl {text-align: center;color:DarkCyan}
+    h5 {text-align: center;font-size: 15px}
+    header {background-color:white;padding: 5px;}
+    code {display: block;color:black; font-size: 13px;}
+    p code { display: inline;color:black; font-size: 14px;background-color: white;}
+    p {text-align: center;color:DarkCyan;font-size: 18px;}
+    footer {background-color:#c1f0f0;padding: 5px;color:#0f3e3e}
+    .right-text { text-align: right;margin-right: 50px;}
+    .textbox { background-color: white; padding: 12px; padding-bottom: 20px; border: 1px solid  #c2d6d6; border-radius: 8px;
+     margin: 20px auto; width: 300px; }
+    .nav-lessons {display: flex; justify-content: space-between;}
+    </style>
+
+    <title>Variables </title>
+</head>
+<body>
+<header>
+<h1>Variables</h1>
+</header>
+<h3><b>What Are Variables?</b></h3>
+    <p><b>Variables</b> are containers that store data values so they can be used later in a program. You can think of a <br>
+        variable like a labeled box where you keep information, and you can open that box whenever you need to use <br>
+        what’s inside. This makes your code easier to work with because you don’t have to keep typing the same value<br>
+        over and over again.<br>
+        Variables can store different types of data, like numbers, text, or even true and false values. Once a variable<br>
+        is created, you can also change what it stores later in the program if needed.</p>
+
+<h5><b>Example:</b></h5>
+<div class="textbox">
+<code>
+age = 16 <br>
+name = "Jordan"
+</code>
+</div>
+
+<p>In this example, the variable age stores the number 16, and the variable name stores the text "Jordan". Later in the <br>
+    program, you can use age and name instead of typing the values again, which makes your code cleaner and easier to understand.</p>
+
+<p>So if we do the print function we will get an output of the stored data</p>
+<h5><b>Example:</b></h5>
+<div class="textbox">
+<code>
+age = 16 <br>
+name = "Jordan"<br>
+print(age)<br>
+print(name)
+</code>
+</div>
+
+<h5><b>Output:</b></h5>
+<div class="textbox">
+<code>16<br>
+Jordan</code>
+</div>
+<br>
+<br>
+<h3><b>Casting</b></h3>
+    <p><b>Casting</b> allows you to change the data type of a variable into another type. This is helpful when data needs to be<br>
+        used in a different way inside a program. For example, a number can be turned into text, or text can be turned <br>
+        into a number so math can be done with it.</p>
+
+  <p>- <code>str()</code> converts a value into a string</p>
+  <p>- <code>int()</code> converts a value into a whole number</p>
+  <p>- <code>float()</code> converts a value into a decimal number </p>
+
+<h5><b>Example:</b></h5>
+<div class="textbox">
+<code>
+age = int("16.1") <span style="color: grey;"> &nbsp; &nbsp; &nbsp;# 16</span><br>
+price = float("4.99") <span style="color: grey;">&nbsp;# 4.99</span><br>
+score = str(100) <span style="color: grey;">&nbsp; &nbsp; &nbsp;&nbsp;# "100"</span>
+</code>
+</div>
+
+<p><u>In this example:</u><br>
+- The string "16" is converted into the integer 16.<br>
+- The string "4.99" is converted into the float 4.99.<br>
+- The number 100 is converted into the string "100".</p>
+<br>
+<br>
+<h3><b>Assigning Multiple Variables</b></h3>
+    <p>You can <b>assign</b> values to multiple variables in one line instead of writing separate lines for each one. This <br>
+        helps make your code shorter and cleaner.</p>
+
+<h5><b>Example:</b></h5>
+<div class="textbox">
+<code>
+first, second, third = 1 , 2 , 3<br>
+print(first)<br>
+print(second)<br>
+print(third)<br>
+</code>
+</div>
+
+<h5><b>Output:</b></h5>
+<div class="textbox">
+<code>1<br>
+2<br>
+3</code>
+</div>
+<br>
+<p><b>What is happening:</b></p>
+<p> •  first gets the value 1 <br>
+•  second gets the value 2 <br>
+•  third gets the value 3 <br></p>
+<br>
+<p>Python matches each variable to a value in order. So the first variable gets the first value, the second gets the<br>
+    second, and so on.</p>
+
+<p style="color: #a3c2c2; font-size:15px"><b> * This only works correctly if the number of variables matches the number of values. If they don’t match, Python <br>
+    will give an error. </b></p>
+
+
+<br>
+<h3><b>Assigning the Same Value</b></h3>
+    <p>You can also give multiple variables the exact same value in one line.</p>
+<h5><b>Example:</b></h5>
+<div class="textbox">
+<code>x = y = z = 100<br>
+print(x)<br>
+print(y)<br>
+print(z)
+</code>
+</div>
+
+<h5><b>Output:</b></h5>
+<div class="textbox">
+<code>100<br>
+100<br>
+100</code>
+</div>
+
+<p><u>What is happening:</u></p>
+<p>•  x, y, and z all point to the same value 100 </p>
+<br>
+<p style="color: #a3c2c2; font-size:15px">* This is useful when you want to set default values or initialize multiple variables quickly.</p>
+
+<br>
+<br>
+<h3><b>Unpacking a List</b></h3>
+    <p><b>Unpacking</b> means taking values from a list and putting them into separate variables.</p>
+<h5><b>Example:</b></h5>
+<div class="textbox">
+<code>sports = ["Basketball","Soccer","Tennis"]<br>
+s1, s2, s3 = sports<br>
+print(s1)<br>
+print(s2)<br>
+print(s3)<br>
+</code>
+</div>
+
+<br>
+<p><u>What is happening:</u></p>
+
+    <p>•	s1 gets "Basketball" <br>
+•	s2 gets "Soccer" <br>
+•	s3 gets "Tennis" <br>
+</p>
+
+<h5><b>Output:</b></h5>
+<div class="textbox">
+<code>Basketball<br>
+Soccer<br>
+Tennis<br>
+</code>
+</div>
+<p>As you can see python goes through the list and assigns each item to a variable in order.</p>
+<br>
+
+<br>
+<h3><b>Ready to quiz your knowledge &#128161</b></h3>
+<p><a href="/quiz_variables" style="background-color:CadetBlue; color:white; padding:10px 25px; border-radius:8px;
+    font-size:16px; text-decoration:none;">  Variables Quiz</a></p>
+<br>
+<br>
+<br>
+<footer>
+
+    <div style="text-align:center; margin:10px;">
+    <p>Ready to practice your coding skills ? 🐍  </p>
+    <a href="/python_tester" style="background-color:CadetBlue; color:white; padding:10px 25px; border-radius:8px;
+    font-size:16px; text-decoration:none;">Click here to try it Yourself!</a>
+</div>
+
+    <div class="nav-lessons">
+<p class="left-text"><b>  Previous lesson </b></p>
+<p class="right-text"><b> Next lesson plan</b></p>
+</div>
+
+<div class="nav-lessons">
+    <a href="/basicpython" style="background-color:CadetBlue; color:white; padding:8px 25px; border-radius:50px;
+    font-size:15px; text-decoration:none;"><<< Basics of Python</a>
+    <a href="/strings" style="background-color:CadetBlue; color:white; padding:8px 25px; border-radius:50px;
+    font-size:15px; text-decoration:none;">Strings >>></a>
+</div>
+
+
+<p><a href="/quiz" >Quiz page</a> |
+
+<a href="/">Home page</a> |
+
+<a href="/lessons">Lessons page</a></p>
+
+
+
+
+</footer>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+    body {background-color:AliceBlue}
+    footer {background-color:#c1f0f0;padding: 5px;color:#0f3e3e}
+    h2 {color:CadetBlue}
+    h3 {color:CadetBlue}
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python Tester</title>
+</head>
+<body>
+
+    <h2>Python Code Tester</h2>
+
+    <textarea id="code" rows="10" cols="60">print("Hello World")</textarea>
+    <br><br>
+
+    <button onclick="runCode()">Run Code</button>
+
+    <h3>Output:</h3>
+    <pre id="output"></pre>
+
+    <script src="https://cdn.jsdelivr.net/pyodide/v0.23.4/full/pyodide.js"></script>
+
+    <script>
+        let pyodide;
+
+        async function main() {
+            pyodide = await loadPyodide();
+        }
+
+        main();
+
+        async function runCode() {
+            const code = document.getElementById("code").value;
+            const outputBox = document.getElementById("output");
+
+            if (!pyodide) {
+                outputBox.textContent = "Python is still loading...";
+                return;
+            }
+
+            try {
+                pyodide.runPython(`
+import sys
+from io import StringIO
+sys.stdout = StringIO()
+                `);
+
+                pyodide.runPython(code);
+
+                let output = pyodide.runPython("sys.stdout.getvalue()");
+                outputBox.textContent = output || "Code ran with no output.";
+            } catch (err) {
+                outputBox.textContent = "Error: " + err;
+            }
+        }
+    </script>
+
+</body>
+<footer>
+
+<p><a href="/quiz">Quiz page</a> |
+
+<a href="/">Home page</a> |
+
+<a href="/python_tester">Python tester</a>|
+
+<a href="/lessons">Lesson page</a>
+
+</p>
+
+</footer>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        body {background-color: AliceBlue; margin: 0;}
+        h1 {text-align: center; color: CadetBlue; background-color: white; padding: 20px; margin: 0;}
+        p {text-align: center; color: DarkCyan; font-size: 18px;}
+        footer {background-color: #c1f0f0; padding: 15px; text-align: center;}
+
+        .lesson-list {
+            max-width: 400px;
+            margin: 30px auto;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            padding: 0 20px;
+        }
+
+        .lesson-btn {
+            display: block;
+            background-color: white;
+            border: 1px solid #c2d6d6;
+            border-radius: 50px;
+            padding: 12px 20px;
+            text-align: center;
+            text-decoration: none;
+            color: DarkCyan;
+            font-size: 16px;
+        }
+
+        .lesson-btn:hover {
+            background-color: #c1f0f0;
+        }
+
+    </style>
+    <title>Lessons Page</title>
+</head>
+<body>
+
+<h1>Lessons Page</h1>
+<p>Click on a lesson to go to the page:</p>
+
+<div class="lesson-list">
+    <a href="/basicpython" class="lesson-btn">Basics of Python</a>
+    <a href="/variables" class="lesson-btn">Variables</a>
+    <a href="/strings" class="lesson-btn">Strings</a>
+    <a href="/booleans" class="lesson-btn">Booleans</a>
+    <a href="/basic_arithmetic_operations" class="lesson-btn">Basic Arithmetic Operations</a>
+    <a href="/loops" class="lesson-btn">Loops + If Statements</a>
+    <a href="/range" class="lesson-btn">Range</a>
+    <a href="/arrays" class="lesson-btn">Arrays</a>
+    <a href="/lists_tuples_sets" class="lesson-btn">Lists, Tuples, and Sets</a>
+    <a href="/function_global_variables" class="lesson-btn">Functions & Global Variables</a>
+</div>
+
+</body>
+
+<footer>
+    <a href="/quiz">Quiz page</a>|
+    <a href="/" >Home page</a>|
+    <a href="/python_tester" >Python tester</a>
+</footer>
+
+</html>

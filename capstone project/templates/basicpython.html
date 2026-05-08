@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+    body {background-color:AliceBlue}
+    h1 {text-align: center;color:CadetBlue}
+    h3 {text-align: center;color:CadetBlue; font-size: 23px;}
+    h4 {text-align: center;color:CadetBlue}
+    dl {text-align: center;color:DarkCyan}
+    h5 {text-align: center;font-size: 15px}
+    header {background-color:white;padding: 5px;}
+    code {display: block;color:black; font-size: 13px;}
+    p code { display: inline;color:black; font-size: 14px;background-color: white;}
+    p {text-align: center;color:DarkCyan;font-size: 18px;}
+    footer {background-color:#c1f0f0;padding: 5px;color:#0f3e3e}
+    .right-text { text-align: right;margin-right: 50px;}
+    .textbox { background-color: white; padding: 12px; padding-bottom: 20px; border: 1px solid  #c2d6d6; border-radius: 8px;
+     margin: 20px auto; width: 300px; }
+    .nav-lessons {display: flex; justify-content: space-between;}
+
+</style>
+    <title>Basic of Python</title>
+</head>
+
+<header>
+    <h1>                 Basic of Python</h1>
+    </header>
+<body>
+
+<br>
+<h3><b>Python Files</b></h3>
+<p>
+Every Python program is saved with the file extension <b>.py</b>. This tells the computer that <br>
+    the file contains Python code.
+</p>
+<h5><b>Example:</b></h5>
+<p><code>hello.py <br>game.py <br>calculator.py</code></p>
+
+<p>
+When you run the file, the Python interpreter reads the code from
+top to bottom and executes the instructions.
+</p>
+<br>
+<br>
+<br>
+
+
+<h3><b>Indentation</b></h3>
+<p><b>Indentation</b> means spacing at the beginning of a line. Python uses indentation to show <br>
+    which lines of code belong together.</p>
+
+<h5><b>Example:</b></h5>
+
+<div class="textbox">
+<code>if 5 > 2:<br>
+      &nbsp; &nbsp;&nbsp;print("five is greater than two")
+    <br>
+</code>
+</div>
+
+
+<h5><b>Output:</b></h5>
+<div class="textbox">
+<code>
+    five is greater than two
+</code>
+</div>
+
+<p>The space before <code>print()</code> shows that the line belongs to the if statement.<br>
+If indentation is missing or inconsistent, Python will give an error. </p>
+
+   <p style="color: #a3c2c2; font-size:15px"> * Most programmers use 4 spaces for indentation.</p>
+<br>
+<br>
+<br>
+
+
+
+<h3><b>Variables</b></h3>
+<p><b>Variables </b>are used to store values so they can be used later in the program.<br>
+Think of a variable like a labeled box where you store information.
+</p>
+
+
+<h5><b>Example:</b></h5>
+<div class="textbox">
+<code>
+x = 5<br>
+popsicle_color = "orange"<br>
+<br>
+print(x)<br>
+print(popsicle_color)
+
+</code>
+</div>
+
+<h5><b>Output:</b></h5>
+<div class="textbox">
+    <code>5<br>
+    orange </code>
+</div>
+
+<br>
+<p><u>In this example:</u> <br>
+    - <code>x</code> stores the number <b>5</b> <br>
+    - <code>popsicle_color</code> stores the value <b>orange</b></p>
+
+<p><u>So basically, when the program runs:</u><br>
+    - If you use <code>x</code>, it will output <b>5</b> <br>
+    - If you use <code>popsicle_color</code>, it will output <b>orange</b></p>
+<br>
+<dl>
+    <dt><b>  Rules for variable names:&nbsp;</b></dt>
+    <dd>- Cannot contain spaces &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</dd>
+    <dd>- Cannot start with a number &nbsp; &nbsp; &nbsp;</dd>
+    <dd>- Cannot contain dashes &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</dd>
+    <dd>- Usually written in lowercase &nbsp; &nbsp; &nbsp; &nbsp;<br>with underscores &nbsp; &nbsp; &nbsp;</dd>
+</dl>
+<br>
+
+<p><b>Examples of variable names:</b></p>
+<p><code>student_name</code>              <br># will work</p>
+<hr style=" ;width: 40%; margin: auto;">
+<p><code>2studentname</code>              <br> # will not work because of the number in front</p>
+<hr style=" ;width: 40%; margin: auto;">
+<p><code>favorite_food</code>                <br> # will work</p>
+<hr style=" ;width: 40%; margin: auto;">
+<p><code>favorite food</code>                <br> # will not work because of the space </p>
+<hr style=" ;width: 40%; margin: auto;">
+<p><code>game_score</code>                   <br> # will work</p>
+<hr style=" ;width: 40%; margin: auto;">
+<p><code>game-score</code>                   <br> # will not work cause of the dash</p>
+<hr style=" ;width: 40%; margin: auto;">
+
+<br>
+<br>
+<br>
+
+
+
+<h3><b>Comments</b></h3>
+    <p><b>Comments</b> are notes written in code that Python ignores when the program runs. Comments can also be used to <br>
+        temporarily turn off parts of code while testing.<br>
+   <br>
+<p><u>They are used to:</u></p>
+<p>
+•	Explain what the code does<br>
+•	Leave reminders for yourself<br>
+•	Make programs easier for others to understand
+</p>
+
+<h5><b>Example:</b></h5>
+<div class="textbox">
+    <code style="color: grey;"># Comments are not shown in the output.</code>
+<code>print("Hello")</code>
+<code style="color: grey;"> # print("fun")</code>
+
+</div>
+
+<h5><b>Output:</b></h5>
+<div class="textbox">
+<code>Hello</code>
+</div>
+
+ <p style="color: #a3c2c2; font-size:15px">* Comments can be written anywhere in your code, and anything after a # will not be shown when the program runs.</p>
+<br>
+<br>
+<br>
+
+<h3><b>Output with print()</b></h3>
+<p>The <code>print()</code> function displays information on the screen.</p>
+
+<h5><b>Example:</b></h5>
+
+<div class="textbox">
+<code>print("Code is Fun")</code>
+</div>
+<p>or</p>
+<div class="textbox">
+<code>name = "Alex"<br>
+      print(name)</code>
+</div>
+
+<br>
+
+<h5><b>Output:</b></h5>
+
+<div class="textbox">
+<code>Code is fun</code>
+</div>
+         <p> and</p>
+<div class="textbox">
+<code>Alex</code>
+</div>
+<br>
+
+
+
+
+
+<h3><b>Ready to quiz your knowledge &#128161</b></h3>
+<p><a href="/quiz_basic" style="background-color:CadetBlue; color:white; padding:10px 25px; border-radius:8px;
+    font-size:16px; text-decoration:none;"> Basics of Python Quiz</a></p>
+
+<br>
+<br>
+<br>
+
+</body>
+<footer>
+
+     <div style="text-align:center; margin:10px;">
+    <p>Ready to practice your coding skills ? 🐍  </p>
+    <a href="/python_tester" style="background-color:CadetBlue; color:white; padding:10px 25px; border-radius:8px;
+    font-size:16px; text-decoration:none;">Click here to try it Yourself!</a>
+</div>
+
+
+<div class="nav-lessons">
+<p class="left-text"><b>  Home </b></p>
+<p class="right-text"><b> Next lesson plan</b></p>
+</div>
+
+<div class="nav-lessons">
+    <a href="/" style="background-color:CadetBlue; color:white; padding:8px 25px; border-radius:50px; font-size:15px;
+    text-decoration:none;"><<< Home page</a>
+    <a href="/variables" style="background-color:CadetBlue; color:white; padding:8px 25px; border-radius:50px;
+    font-size:15px; text-decoration:none;">Variables >>></a>
+</div>
+
+
+
+<p><a href="/quiz" >Quiz page</a> |
+
+<a href="/">Home page</a> |
+
+<a href="/lessons">Lessons page</a></p>
+
+
+</footer>
+
+
+</html>

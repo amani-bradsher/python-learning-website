@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+    body {background-color:AliceBlue}
+    h1 {text-align: center;color:CadetBlue}
+    h3 {text-align: center;color:CadetBlue; font-size: 23px;}
+    h4 {text-align: center;color:CadetBlue}
+    dl {text-align: center;color:DarkCyan}
+    h5 {text-align: center;font-size: 15px}
+    header {background-color:white;padding: 5px;}
+    code {display: block;color:black; font-size: 13px;}
+    p code { display: inline;color:black; font-size: 14px;background-color: white;}
+    p {text-align: center;color:DarkCyan;font-size: 18px;}
+    footer {background-color:#c1f0f0;padding: 5px;color:#0f3e3e}
+    .right-text { text-align: right;margin-right: 50px;}
+    .textbox { background-color: white; padding: 12px; padding-bottom: 20px; border: 1px solid  #c2d6d6; border-radius: 8px;
+     margin: 20px auto; width: 300px; }
+    .nav-lessons {display: flex; justify-content: space-between;}
+    </style>
+    <title>Functions</title>
+</head>
+<body>
+    <header>
+    <h1>Functions and Global Variables</h1>
+    </header>
+
+<h3>What is an function? </h3>
+    <p><b>Functions</b> allow you to group code together and reuse<br>
+        it whenever you want. This helps keep programs organized<br>
+        and easier to read.
+</p>
+
+<h5><b>Example:</b></h5>
+<div class="textbox">
+    <code>def greet():<br>
+          &nbsp; &nbsp;print("Hello!")<br>
+        <br>
+        greet()
+</code>
+</div>
+    <p>To run a function in Python, you call it by writing its name followed by parentheses, like <code>greet()</code>.<br>
+        This tells Python to get/run the code inside the function.</p>
+
+
+<h5>Output:</h5>
+<div class="textbox">
+    <code>Hello</code>
+</div>
+<br>
+<br>
+<br>
+
+<h3><b>Why Functions Are Helpful?</b></h3>
+    <p><u>Functions help because they:</u></p>
+    <p>
+      • Reduce repeated code<br>
+      • Make programs easier to understand <br>
+      • Break large programs into smaller pieces<br>
+      • Help organize your code and keep it cleaner
+    </p>
+<br>
+<br>
+<br>
+<h3><b>Return vs Print</b></h3>
+    <p>Knowing the difference between <b>print</b> and <b>return</b> in functions is important because they affect how your program <br>
+        works. If you only use print, the value just shows up and can’t be used again. But with return, the function <br>
+        gives the value back so you can store it, reuse it, or use it in other parts of your code. Understanding this <br>
+        helps you build functions that actually do something useful, not just display output.
+    </p>
+    <br>
+
+    <p><b>print()</b> shows output to the user.</p>
+
+  <h5><b>Example:</b></h5>
+    <div class="textbox">
+    <code>print("Hello")</code>
+    </div>
+
+
+     <h5><b>Output:</b></h5>
+    <div class="textbox">
+        <code>Hello</code>
+    </div>
+<br>
+<br>
+
+    <p><b>return</b> sends a value back to the program.</p>
+
+  <h5><b>Example:</b></h5>
+    <div class="textbox">
+        <code>def add(a, b):<br>
+               &nbsp; &nbsp;return a + b<br>
+            <br>
+              result = add(2, 3)<br>
+               print(result)
+        </code>
+    </div>
+
+  <h5><b>Output:</b></h5>
+    <div class="textbox">
+        <code>5</code>
+    </div>
+    <br>
+    <br>
+    <br>
+
+<h3><b>Global Variables</b></h3>
+    <p>A <b>global variable</b> is a variable created outside a function that can be used anywhere in the program.<br>
+        This allows different functions to share the same data. However, using too many global variables can cause problems,<br>
+        since changes in one part of the code can affect other parts.</p>
+
+   <h5><b>Example:</b></h5>
+    <div class="textbox">
+    <code>x = "Python"<br>
+        <br>
+          def my_function():<br>
+          &nbsp; &nbsp;print("I am learning " + x)<br>
+        <br>
+          my_function()
+    </code>
+    </div>
+
+    <h5><b>Output:</b></h5>
+     <div class="textbox">
+    <code>I am learning Python</code>
+     </div>
+
+    <p><b>Explanation:</b></p>
+    <p>
+  • The variable x is created outside the function.<br>
+  • Because it is outside the function, it becomes a global variable.<br>
+  • The function can still use the variable even though it was not created inside the function.<br>
+  • Global variables can be accessed by any part of the program.
+    </p>
+
+<br>
+<br>
+<br>
+    <h3><b>Ready to quiz your knowledge &#128161</b></h3>
+      <p><a href="/quiz_function" style="background-color:CadetBlue; color:white; padding:10px 25px; border-radius:8px;
+    font-size:16px; text-decoration:none;">  Functions and Global Variables Quiz</a></p>
+<br>
+<br>
+<br>
+
+
+</body>
+
+<footer>
+
+     <div style="text-align:center; margin:10px;">
+    <p>Ready to practice your coding skills ? 🐍  </p>
+    <a href="/python_tester" style="background-color:CadetBlue; color:white; padding:10px 25px; border-radius:8px;
+    font-size:16px; text-decoration:none;">Click here to try it Yourself!</a>
+</div>
+
+<div class="nav-lessons">
+<p class="left-text"><b>  Previous lesson </b></p>
+<p class="right-text"><b> Next lesson plan</b></p>
+</div>
+
+<div class="nav-lessons">
+    <a href="/lists_tuples_sets" style="background-color:CadetBlue; color:white; padding:8px 25px; border-radius:50px;
+    font-size:15px; text-decoration:none;"><<< Lists, Tuples, and Sets</a>
+    <a href="/" style="background-color:CadetBlue; color:white; padding:8px 25px; border-radius:50px; font-size:15px;
+    text-decoration:none;">Home page >>></a>
+</div>
+
+<p><a href="/quiz" >Quiz page</a> |
+
+<a href="/">Home page</a> |
+
+<a href="/lessons">Lessons page</a></p>
+
+</footer>

@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+    body {background-color:AliceBlue}
+    h1 {text-align: center;color:CadetBlue}
+    h3 {text-align: center;color:CadetBlue; font-size: 23px;}
+    h4 {text-align: center;color:CadetBlue}
+    dl {text-align: center;color:DarkCyan}
+    h5 {text-align: center;font-size: 15px}
+    header {background-color:white;padding: 5px;}
+    code {display: block;color:black; font-size: 13px;}
+    p code { display: inline;color:black; font-size: 14px;background-color: white;}
+    p {text-align: center;color:DarkCyan;font-size: 18px;}
+    footer {background-color:#c1f0f0;padding: 5px;color:#0f3e3e}
+    .right-text { text-align: right;margin-right: 50px;}
+    .textbox { background-color: white; padding: 12px; padding-bottom: 20px; border: 1px solid  #c2d6d6; border-radius: 8px;
+     margin: 20px auto; width: 300px; }
+    .nav-lessons {display: flex; justify-content: space-between;}
+    </style>
+    <title>booleans</title>
+</head>
+<body>
+<header>
+    <h1>Booleans</h1>
+</header>
+<h3><b>What are booleans?</b></h3>
+    <p><b>Booleans</b> represent True or False values in Python. They are used when a program needs<br>
+        to check if something is correct or meets a condition, such as comparing two numbers. <br>
+        Many comparisons in Python return a Boolean value of True or False.</p>
+
+<h5><b>Example:</b></h5>
+
+<div class="textbox">
+<code>print(5>2)</code>
+</div>
+
+<p>When Python compares two values, the result is a Boolean. <br>
+    This means it will return either True or False depending on the comparison.<p>
+<br>
+    <p><b>You can use different comparison operators like:</b></p>
+    <p>
+        &nbsp;&nbsp; •	<code>></code> greater than<br>
+        •	<code><</code> less than&nbsp;&nbsp;<br>
+        •	<code>==</code> equal to&nbsp;<br>
+       &nbsp; &nbsp; •	<code>!=</code> not equal to<br>
+    </p>
+
+<h5><b>Example:</b></h5>
+<div class="textbox">
+    <code>
+        print(3==3)<br>
+        print(7<4)
+    </code>
+</div>
+
+<h5><b>Output:</b></h5>
+<div class="textbox">
+    <code>
+        True<br>
+        False
+    </code>
+</div>
+
+ <p style="color: #a3c2c2; font-size:15px"> * Booleans are important because they are used in decision making, like in if statements, where your program <br>
+     chooses what to do based on True or False.</p>
+
+<br>
+<br>
+<br>
+
+ <h3>bool() Function</h3>
+<p>The <code>bool()</code> function can test a value and return True or False. It is used to check if something has a value or not.</p>
+<br>
+<p><b> Checking Values with</b> <code>bool()</code>:</p>
+
+ <p>
+    •	Any number except 0 → True<br>
+    •	&nbsp;0&nbsp;&nbsp; → &nbsp; &nbsp;False  &nbsp; &nbsp; &nbsp; <br>
+    • 	Any string except "" → True<br>
+    •	Empty lists or strings → False<br>
+
+</p>
+
+<h5><b>Example:</b></h5>
+<div class="textbox">
+    <code>
+       print(bool(5)) <span style="color: grey;"> &nbsp;&nbsp; # True</span><br>
+       print(bool(0)) <span style="color: grey;">&nbsp; &nbsp;# False</span><br>
+       print(bool("hi")) <span style="color: grey;"># True</span><br>
+       print(bool("")) <span style="color: grey;">&nbsp;&nbsp;# False</span>
+
+    </code>
+</div>
+
+
+<h5><b>Output:</b></h5>
+<div class="textbox">
+    <code>
+        True<br>
+        False<br>
+        True<br>
+        False<br>
+    </code>
+</div>
+
+<br>
+<br>
+<br>
+
+<h3>isinstance()</h3>
+  <p>The <code>isinstance()</code> function checks if something is a certain data type. This helps you make sure your program is<br>
+      using the correct type of data.</p>
+
+<h5>Example:</h5>
+<div class="textbox">
+<code>x = isinstance(5, int)<br>
+print(x)
+</code>
+</div>
+
+    <p>It will return <b>True</b> if the value matches the data type, and False if it does not.</p>
+
+<br>
+<br>
+<br>
+
+<h3>Operators for Comparing and Checking Values</h3>
+  <p>Python uses special operators to compare values and test conditions. These operators help programs<br>
+      determine whether something is true or false.</p>
+<br>
+<style>
+table {
+  border-collapse: collapse;
+  width: 60%;
+  margin: 0 auto; /* centers the table */
+
+
+}
+
+th, td {
+  border: 1px solid #669999;
+  padding: 8px;
+  text-align: center;
+
+}
+</style>
+
+<h3 style="text-align:center;color:#5c8a8a;">Python Logical and Membership Operators</h3>
+
+<table>
+  <tr>
+    <th>Operator</th>
+    <th>Description</th>
+  </tr>
+
+  <tr>
+    <td><code>and</code></td>
+    <td>Returns True if both statements are true</td>
+  </tr>
+
+  <tr>
+    <td><code>or</code></td>
+    <td>Returns True if one of the statements is true</td>
+  </tr>
+
+  <tr>
+    <td><code>not</code></td>
+    <td>Reverses the result, returns False if the result is true</td>
+  </tr>
+
+  <tr>
+    <td><code>is</code></td>
+    <td>Returns True if both variables are the same object</td>
+  </tr>
+
+  <tr>
+    <td><code>is not</code></td>
+    <td>Returns True if both variables are not the same object</td>
+  </tr>
+
+  <tr>
+    <td><code>in</code></td>
+    <td>Returns True if a sequence with the specified value is present in the object</td>
+  </tr>
+
+  <tr>
+    <td><code>not in</code></td>
+    <td>Returns True if a sequence with the specified value is not present in the object</td>
+  </tr>
+
+</table>
+<br>
+<br>
+<br>
+    <h3><b>Ready to quiz your knowledge &#128161</b></h3>
+      <p><a href="/quiz_boolean" style="background-color:CadetBlue; color:white; padding:10px 25px; border-radius:8px;
+    font-size:16px; text-decoration:none;">  Boolean Quiz</a></p>
+<br>
+<br>
+<br>
+</body>
+<footer>
+
+     <div style="text-align:center; margin:10px;">
+    <p>Ready to practice your coding skills ? 🐍  </p>
+    <a href="/python_tester" style="background-color:CadetBlue; color:white; padding:10px 25px; border-radius:8px;
+    font-size:16px; text-decoration:none;">Click here to try it Yourself!</a>
+</div>
+
+<div class="nav-lessons">
+<p class="left-text"><b>  Previous lesson </b></p>
+<p class="right-text"><b> Next lesson plan</b></p>
+</div>
+
+<div class="nav-lessons">
+    <a href="/strings" style="background-color:CadetBlue; color:white; padding:8px 25px; border-radius:50px;
+    font-size:15px; text-decoration:none;"><<< Strings</a>
+    <a href="/basic_arithmetic_operations" style="background-color:CadetBlue; color:white; padding:8px 25px;
+     border-radius:50px; font-size:15px; text-decoration:none;">Basic Arithmetic Operations >>></a>
+</div>
+
+
+<p><a href="/quiz" >Quiz page</a> |
+
+<a href="/">Home page</a> |
+
+<a href="/lessons">Lessons page</a></p>
+
+
+</footer>
+

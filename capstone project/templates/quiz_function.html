@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+        <style>
+           body {background-color:AliceBlue}
+           h1 {text-align: center;color:CadetBlue;background-color: white;  padding: 15px;}
+           code {display: block;color:black; font-size: 13px;}
+           p {color:DarkCyan;font-size: 18px;}
+           footer {background-color:#c1f0f0;padding: 5px;color:#0f3e3e}
+          .nav-lessons {display: flex; justify-content: space-between;}
+          .nav {display: flex;gap: 10px;}
+          .textbox { background-color: white; padding: 12px; border: 1px solid  #c2d6d6; border-radius: 8px;
+           width: 300px; }
+           p code { display: inline;color:black; font-size: 14px;background-color: white;}
+           .score-message { text-align: center; background-color: white; border: 1px solid #c2d6d6; border-radius: 8px;
+            padding: 20px; margin: 20px auto; width: 400px;}
+
+        </style>
+    <title>Functions</title>
+</head>
+<body>
+<h1>Functions and Global Variables Quiz</h1>
+
+<form method="POST" action="/quiz_function">
+
+<p>1. What is a function used for?</p>
+<input type="radio" name="q1" value="a"> A. Repeating loops <br>
+<input type="radio" name="q1" value="b"> B. Grouping reusable code <br>
+<input type="radio" name="q1" value="c"> C. Storing lists <br>
+<input type="radio" name="q1" value="d"> D. Printing only <br><br>
+
+<p>2. How do you run a function named greet?</p>
+<input type="radio" name="q2" value="a"> A. run greet <br>
+<input type="radio" name="q2" value="b"> B. greet() <br>
+<input type="radio" name="q2" value="c"> C. function greet <br>
+<input type="radio" name="q2" value="d"> D. call greet <br><br>
+
+<p>3. What does return do?</p>
+<input type="radio" name="q3" value="a"> A. Prints output <br>
+<input type="radio" name="q3" value="b"> B. Sends a value back <br>
+<input type="radio" name="q3" value="c"> C. Stops loops only <br>
+<input type="radio" name="q3" value="d"> D. Creates variables <br><br>
+
+<p>4. What will this return?</p>
+<div class="textbox">
+<pre><code>def add(a, b):
+    return a + b</code></pre>
+</div>
+<input type="radio" name="q4" value="a"> A. It prints automatically <br>
+<input type="radio" name="q4" value="b"> B. It returns the sum <br>
+<input type="radio" name="q4" value="c"> C. It loops <br>
+<input type="radio" name="q4" value="d"> D. It errors <br><br>
+
+<p>5. True or False: print() and return do the exact same thing.</p>
+<input type="radio" name="q5" value="true"> True <br>
+<input type="radio" name="q5" value="false"> False <br><br>
+
+<p>6. What is a global variable?</p>
+<input type="radio" name="q6" value="a"> A. Inside a loop <br>
+<input type="radio" name="q6" value="b"> B. Inside a function <br>
+<input type="radio" name="q6" value="c"> C. Outside a function and used anywhere <br>
+<input type="radio" name="q6" value="d"> D. Only numbers <br><br>
+
+<p>7. Why are functions helpful?</p>
+<input type="radio" name="q7" value="a"> A. Make code longer <br>
+<input type="radio" name="q7" value="b"> B. Reduce repeated code <br>
+<input type="radio" name="q7" value="c"> C. Remove variables <br>
+<input type="radio" name="q7" value="d"> D. Stop programs <br><br>
+
+<button type="submit" style="background-color:CadetBlue; color:white; padding:10px 25px; border:none; border-radius:8px;
+font-size:15px; cursor:pointer;">Submit Quiz</button>
+<br>
+    <br>
+</form>
+{% if score is not none %}
+    <div class="score-message">
+     {% if score == 7 %}
+        <p>🌟 Perfect plus! You got 7 out of 7! Amazing work!</p>
+
+     {% elif score == 5 or score == 6 %}
+        <p>🎉 So close! You got {{score}} out of 7! Just one more for a perfect score!</p>
+
+     {% elif score == 3 or score == 4 %}
+        <p>👍 Great job! You got {{score}} out of 7! You're getting the hang of it!</p>
+
+     {% elif score == 1 or score == 2 %}
+        <p>💪 You got {{score}} out of 7! Don't give up — review the lesson and give it another shot!</p>
+
+     {% elif score == 0 %}
+        <p>😊 You got 0 out of 7! Everyone starts somewhere — review and keep going!</p>
+     {% else %}
+
+         <p>Score not available.</p>
+     {% endif %}
+     </div>
+{% endif %}
+
+
+
+
+<footer>
+
+<div class="nav-lessons">
+<p class="left-text"><b>  Current lesson </b></p>
+<p class="right-text"><b> Next lesson plan</b></p>
+</div>
+
+<div class="nav-lessons">
+<p class="left-text"><a href="/function_global_variables"> <<< Functions and Global Variables </a></p>
+<p class="right-text"><a href="/">  Home page >>></a></p>
+</div>
+
+<p style="text-align:center;"><a href="/quiz">Quiz page</a> |
+
+<a href="/lessons">Lessons page</a> |
+
+<a href="/python_tester">Python tester</a></p>
+
+</footer>
+
+</body>
+</html>
+
